@@ -429,6 +429,63 @@ header .menu-open {
     }
   }
 
+.how-tabs-ui{
+  padding: 9.6rem 0;
+}
+
+.how-tabs-ui .main-content{
+  width: 100%;
+  max-width: 128rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 9.6rem;
+}
+
+.how-tabs-ui .main-content .right-content{
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+
+.how-tabs-ui .main-content .right-content .tabs{
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.how-tabs-ui .main-content .right-content .tabs .tab-item{
+  padding: 1.6rem 2rem;
+  text-align: center;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 3px solid #70c174;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.how-tabs-ui .main-content .right-content .tabs .tab-item.active{
+  opacity: 1;
+}
+
+.how-tabs-ui .main-content .right-content .tabs .tab-item:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: #eff7f2;
+}
+
+.how-tabs-ui .main-content .right-content .tabs-content .tab-pane.active{
+  display: block;
+}
+
+.how-tabs-ui .main-content .right-content .tabs-content .tab-pane{
+  display: none;
+}
+
+
 .usage-section{
   padding: 6.4rem 0;
 }
