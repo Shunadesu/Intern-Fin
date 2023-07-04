@@ -1,38 +1,14 @@
-const modal = document.getElementById("popupBox");
+const tabs = document.querySelectorAll('.tab-item');
+const tabs_pane = document.querySelectorAll('.tab-pane');
 
-const openBtn = document.getElementById("openBtn");
+tabs.forEach((tab, index) => {
 
-const closeBtn = document.getElementsByClassName("popup-close-btn")[0];
+  const pane = tabs_pane[index];
 
-const wrapper = document.getElementsByClassName("modal-wrapper")[0];
-
-openBtn.onclick = function () {
-  modal.style.display = "block";
-  wrapper.style.display = "block";
-
-  wrapper.style.opacity = "1";
-};
-
-closeBtn.onclick = function () {
-  modal.style.display = "none";
-  wrapper.style.display = "none";
-
-  wrapper.style.opacity = "0";
-};
-
-wrapper.onclick = function () {
-  modal.style.display = "none";
-  wrapper.style.display = "none";
-
-  wrapper.style.opacity = "0";
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  tab.onclick = function(){
+    document.querySelector('.tab-item.active').classList.remove('active');
+    document.querySelector('.tab-pane.active').classList.remove('active');
+    this.classList.add('active');
+    pane.classList.add('active');
   }
-};
-
-modal.onclick = function (e) {
-  e.stopPropagation();
-};
+})
